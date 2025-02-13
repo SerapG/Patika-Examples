@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <h1>Funciton Examples</h1>
+    <script>
+        //Funcion Declaration
+        function sayHello(name) {
+            return `Mehaba, ${name}!`
+        }
+        console.log(sayHello("Alice"))
+
+        //Function Expression
+        const multiply = function (a, b) {
+            return a * b
+        }
+        console.log("Çarpma sonucu:", multiply(3, 5))
+
+        //Arrow Funcitons
+        const divide = (x, y) => (x / y)
+        console.log("Bölme Sonucu:", divide(10, 2))
+
+        //Default Parameters
+        function greetUser(surname, name = "misafir") {
+            return "Hoş geldin, " + `${name}` + " " + `${surname}` + " !"
+        }
+        console.log(greetUser("John", "Due"))
+        console.log(greetUser("Serap"))
+    </script>
+</body>
+
+</html>
