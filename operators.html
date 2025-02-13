@@ -15,9 +15,49 @@
         let z
 
         console.group('Aritmetic')
+
         z = x + y
         console.log('addittion', z)
+
+        z = x - y
+        console.log('subtraction', z)
+
+        z = x * y
+        console.log('multiplication', z)
+
+        z = x / y
+        console.log('division', z)
+
+        z = z % y
+        console.log('mode', z)
+
+        z = x ** y
+        console.log('exponentiation', z)
+
+        z = (100 + 50) * 2
+        console.log('precedence', z)
+
+        x++;
+        console.log('increment', x)
+
+        x--;
+        console.log('decrement', x)
         console.groupEnd()
+
+        x += y // x= x+y
+        console.log('addiction', x)
+        x = 10;
+
+        x -= y; // x=x-y
+        console.log('subtraction', x)
+
+        x = 10
+
+        x *= y // x=x*y
+        console.log('multiplication', x)
+        console.groupEnd()
+
+
     </script>
 </body>
 
