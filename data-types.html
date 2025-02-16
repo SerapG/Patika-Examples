@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+</head>
+
+<body>
+    <h1>JavaScript Data Types</h1>
+    <script>
+        let str = "John's"
+        console.log(typeof (str))
+
+        let int = 21
+        console.log(typeof (int), int)
+
+        let bool = true
+        console.log(typeof (bool), bool)
+
+        let bigint = BigInt('54684615646846156518465463213')
+        console.log(typeof bigint, bigint)
+
+        let symbol = Symbol('Aras') //degistirilemez veri olusturduk
+        console.log(typeof symbol, symbol)
+
+        let x
+        console.log(typeof x, x)
+
+        let y = null
+        console.log(typeof y, y)
+
+        let obj = {
+            name: 'John',
+            age: 28,
+            admin: true
+        }
+        console.log(typeof obj, obj)
+
+        //immutable,degistirilemez
+        let name = 'john'
+        let cloneName = name
+        cloneName = 'Aras'
+        console.log('immutable', name, cloneName)
+
+        //Mutable
+        let user = {
+            name: 'Serap'
+        }
+        let cloneUser = user
+        cloneUser.name = 'Gülgen'
+        console.log('mutable', user, cloneUser)
+
+    </script>
+</body>
+
+</html>
