@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Veriables</title>
+</head>
+
+<body>
+    <h1>JavaScript Veriables</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Scope</th>
+                <th>Redeclare</th>
+                <th>Reassign</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>VAR</th>
+                <th>no</th>
+                <th>yes</th>
+                <th>yes</th>
+            </tr>
+        </tbody>
+        <tr>
+            <th>LET</th>
+            <th>yes</th>
+            <th>no</th>
+            <th>yes</th>
+        </tr>
+        <tr>
+            <th>CONST</th>
+            <th>yes</th>
+            <th>no</th>
+            <th>no</th>
+        </tr>
+    </table>
+    <script>
+        //Declaring Veriables
+        var x = 1
+        let y = 2
+        const z = 3 //degerini olustururken atamamiz gerekir
+        console.log(x, y, z)
+
+        //Redeclare Veriables
+        var x = -1
+        console.log('redeclared x:', x)
+        //let y = -2
+        //console.log('redeclared y:', y) //izin verilmez
+        //let z = -3
+        //console.log('redeclared z:', z) //izin verilmez
+
+        //Reassign Veriables
+        x = 10
+        y = 20
+        //z = 30 //izin verilmez
+        console.log(x, y, z)
+
+        const user = { //tekrar atanamaz degisken
+            name: 'serap', //icerisindeki propertyleri degistirebiliriz
+            age: 25
+        }
+        console.log('const user degiskeni', user)
+        user.name = 'Gülgen' //yapilabilir
+        console.log('reassigned user.name', user)
+
+        //Veriable Scope
+        //süslü parantezler block olusturur
+        {//block scope
+            let y = 55;
+            const blockZ = 66
+            console.log('blockY/blockZ', y, blockZ)
+        }
+        console.log(y) //global scope
+
+        {//global scope
+            var globalX = 88
+
+        }
+        console.log('global x ', globalX)
+
+        function example() { //bu degiskenler sadece function scope icerisinde gecerli
+            var x = 4
+            let y = 5
+            const z = 6
+            console.log('function scope', x, y, z)
+        }
+        example()
+        console.log('function scope', x, y, z)
+
+    </script>
+</body>
+
+</html>
