@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript CallBack Functions</title>
+</head>
+
+<body>
+    <h1>MultipleByTwo Functions with CallBack</h1>
+    <script>
+        let val;
+        function multipleByTwo(a, b, c, callback) {
+            let arr = []
+            //gönderilen argümanın fonksiyon olup olmadigini kontrol ediyoruz
+            if (callback && typeof callback === 'function') {
+                // callback fonksiyonu ile 2 ile carpilan degerlerin uzerine 1 eklenerek hesaplama yapilacak
+                for (let i = 0; i < 3; i++) {
+                    arr[i] = callback(arguments[i] * 2)
+                }
+            }
+            return arr;
+        }
+        function addOne(a) { // callback fonksiyonu tanımladık 
+            return a + 1;
+        }
+        val = multipleByTwo(5, 10, 20, addOne)
+
+        //for (let i = 0; i < val.length; i++) {
+        //    val[i] = addOne(val[i])
+        //}
+        console.log(val)
+    </script>
+</body>
+
+</html>
