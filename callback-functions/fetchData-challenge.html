@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Functions FetchData Challenge</title>
+</head>
+
+<body>
+    <h1>CallBack Functions FetchData Challenge</h1>
+    <script>
+        //function fetchData(callback) {
+        //  const fn = () => {
+        //    console.log("Veri alındı");
+        //  callback(); // Veri alındıktan sonra callback fonksiyonu çağrılır
+        //};
+
+        //setTimeout(fn, 5000);
+        //}
+
+        //function processData() { console.log("Veri işleniyor..."); }
+        //fetchData(processData);
+
+
+        function fetchData(callback) {
+            const fn = () => {
+                console.log("Veri Alındı!")
+                callback() //Veri alindiktan sonra callback fonksiyonu cagirilir
+            }
+
+            setTimeout(() => {
+                console.log("Veri alındı!")
+                callback()
+            }, 5000)
+        }
+
+        function processData() {
+            console.log("Veri işleniyor!")
+        }
+        fetchData(processData)
+
+
+
+    </script>
+</body>
+
+</html>
