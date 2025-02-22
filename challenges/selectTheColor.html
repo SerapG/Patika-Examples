@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select The Color Challenge</title>
+</head>
+
+<body>
+    <h1>Select The Color Challenge</h1>
+    <script>
+        // 0-50 araligina renk atamasi yapan fonksiyon
+        function Color(value) {
+            if (typeof value === 'boolean') {
+                return 'Geçerli bir deger giriniz!'
+            }
+            else if (value >= 0 && value <= 10) {
+                return 'red';
+            } else if (value > 10 && value <= 20) {
+                return 'blue';
+            } else if (value > 20 && value <= 30) {
+                return 'pink';
+            } else if (value > 30 && value <= 40) {
+                return 'orange';
+            } else if (value > 40 && value <= 50) {
+                return 'purple';
+            } else {
+                //belirtilen durumlar haricinde bir arguman girilirse uyari yazisi cikar
+                return 'Lütfen 0-50 araliginda bir sayi giriniz!'
+            }
+        }
+        console.log(Color(-5))
+        console.log(Color(11))
+        console.log(Color(0))
+        console.log(Color(46))
+        console.log(Color(25))
+        console.log(Color(41))
+        console.log(Color(51))
+        console.log(Color(17))
+        console.log(Color(30))
+        console.log(Color(35))
+        console.log(Color(10))
+        console.log(Color(23617826381237))
+        console.log(Color('serap'))
+        console.log(Color(true))
+        console.log(Color(false))
+        console.log(Color(undefined))
+        console.log(Color(null)) // bu kontrol saglanmamistir
+    </script>
+</body>
+
+</html>
