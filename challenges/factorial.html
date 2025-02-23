@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Factorial Chalenge</title>
+</head>
+
+<body>
+    <h1>JavaScript Factorial Challenge</h1>
+    <script>
+        function factorial(val) {
+            let price = 1
+            for (let i = 1; i <= val; i++) {
+                price = price * i //faktoriyel hesaplaması yapilip price degiskenine atandi
+            }
+            console.log(price)
+            return price
+        }
+        console.log(factorial(0)) //return ifadesini kontrol ettim
+        factorial(1)
+        factorial(2)
+        factorial(3)
+        factorial(10)
+
+    </script>
+
+</body>
+
+</html>
