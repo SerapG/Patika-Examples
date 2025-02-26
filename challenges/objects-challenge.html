@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects Challenge</title>
+</head>
+
+<body>
+    <h1>JavaScript Objects Challenge</h1>
+    <script>
+        const person = {
+            name: "John",
+            age: 30,
+            country: "USA"
+        }
+        //1.name ve age özelliklerini loglayalim
+        console.log("name: ", person.name, "age: ", person.age)
+
+        //2.nesneye city ozelligi ekleyelim
+        person['city'] = "chicago"
+        console.log(person)
+
+        //3.nesnenin age ozelligini degistirelim
+        person.age = 25
+        console.log(person)
+
+        //4.country ozelligini silelim
+        delete person.country
+        console.log(person)
+
+        //5.name ve country ozelliklerini destructure edelim
+
+        const person1 = { name: "John", age: 30, country: "USA" };
+
+        const { name, country } = person1
+        console.log(name)
+        console.log(country)
+
+        //tüm keys and values i loglayalim
+        const keys = Object.keys(person)
+        const values = Object.values(person)
+
+        console.log(keys)
+        console.log(values)
+
+        //7.person ve addresi birlestirip tek bir nesne yapalim
+        const address = {
+            city: "Berlin",
+            country: "Germany"
+        }
+
+        const personAndAdress = { ...person, ...address }
+
+        console.log(personAndAdress)
+
+        //8.city degerine erisip loglayalim
+        const user = {
+            name: "John",
+            address: {
+                city: "New York",
+                country: "USA"
+            }
+        }
+
+        console.log(user.address.city)
+
+        //9.for...in dongusu ile iterate edelim
+        for (const key in person) {
+            console.log(`${key}: ${person[key]}`)
+        }
+
+        //10."city not found" loglayalim
+        if (person.city) {
+            console.log(person.city)
+        } else {
+            console.log("city not found")
+        }
+
+
+    </script>
+</body>
+
+</html>
