@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Arrays Challenge</title>
+</head>
+
+<body>
+    <h1>JavaScript Arrays Challenge</h1>
+    <script>
+        //1.map() challenge
+        //--Create a new array that doubles each number in the original array.
+        const numbers = [1, 2, 3, 4]
+        const mappedNumbers = numbers.map(number => number * 2)
+        console.log("Mapped numbers: ", mappedNumbers)
+
+        //2.forEach() challenge 
+        //-- Print all elements in the array with the message 'This is X'
+        const fruits = ["apple", "banana", "grape", "orange", "pineapple"]
+        fruits.forEach(fruit => { console.log(`This is ${fruit}`) })
+
+        //3.filter() challenge
+        // -- Create a new array containing only numbers greater than 10 from the original array.
+        const originalNumbers = [5, 12, 8, 21]
+        const greaterThanTen = originalNumbers.filter(number => number > 10)
+        console.log("Greater than ten: ", greaterThanTen)
+
+        //4.find() challenge
+        //-- Find the banana in the fruits array.
+        const foundFruit = fruits.find(fruit => fruit === "banana")
+        console.log("Find the banana:", foundFruit)
+
+        //5.includes() challenge
+        //-- Check if there is an apple in the array.
+        console.log("Check the apple: ", fruits.includes("apple"))
+
+        //6.slice() challenge
+        //-- Create a new array consisting of the first two elements of the original array.
+        const selectedArr = numbers.slice(0, 2)
+        console.log("Selected array: ", selectedArr)
+
+        //7.push() challenge
+        //-- Add a new watermelon fruit to the end of the array.
+        fruits.push("watermelon")
+        console.log("Push a fruit: ", fruits)
+
+        //8.pop() challenge
+        //-- Remove the fruit at the end of the array.
+        fruits.pop()
+        console.log("Pop yüthe fruit: ", fruits)
+
+
+
+    </script>
+</body>
+
+</html>
