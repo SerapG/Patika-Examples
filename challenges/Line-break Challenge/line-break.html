@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Line-Break Challenge</title>
+</head>
+
+<body>
+    <h1>JavaScript Line-Break Challenge </h1>
+    <h4>--the solution in the lesson--</h4>
+    <script>
+        const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed fermentum enim, eget egestas enim. Donec fringilla bibendum placerat. Vivamus in turpis et sapien pulvinar dictum ut vel nisl. Duis in ante tempor elit dapibus consectetur vel id arcu. Donec elementum euismod purus, a gravida lectus lacinia sed. Curabitur molestie, felis ornare luctus viverra, dui lacus ultricies orci, id dignissim sapien odio pretium nisi. Etiam accumsan elementum ligula, eget finibus urna pharetra et. Praesent sit amet ligula vel erat sodales suscipit vitae vitae metus. Aenean accumsan sapien a ipsum elementum, non lobortis est tincidunt. Etiam auctor tellus et pharetra auctor. Vivamus elit diam, sollicitudin quis nunc quis, porta dapibus augue. Pellentesque in placerat tellus. Etiam rhoncus odio tincidunt auctor tincidunt. Nulla facilisi."
+
+        function TextParser(text, wordCount) {
+            let result = '';
+            const split = text.split(' ')
+            //console.log(split)
+
+            let i = 0
+            while (i < split.length) {
+                result += split[i] + ' ';
+
+                //(0 % 0 === 0 her zaman dogrudur)
+                if ((i + 1) % wordCount === 0) result += '\n';
+                i++;
+            }
+
+
+
+            console.log(result);
+            return result;
+        }
+
+        TextParser(text, 5); // her satirda 5 kelime olmali.
+    </script>
+</body>
+
+</html>
