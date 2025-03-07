@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Algorithm</title>
+</head>
+
+<body>
+    <h1>JavaScript Algorithm</h1>
+    <script>
+        class Vehicle {
+            model = 2015;
+            type = 'car'
+
+            //sinifin baslangic degerlerini beliremek icin kullanilir
+            constructor() { }
+
+            //method / function
+            getType() {
+                console.log(this.type)
+                return this.type
+            }
+
+            getModel() {
+                console.log(this.model)
+                return this.model
+            }
+        }
+
+        //INSTANCE / ENSTANTANE
+        const d = new Date(null)
+        const d1 = new Date(123)
+        const d2 = new Date('06.03.2025')
+        const d3 = Date.now()
+        const d4 = new Date(d3)
+        const d5 = new Date().getUTCDate()
+        const d6 = new Date().toISOString()
+        const d7 = new Date().toUTCString
+        const d8 = new Date().toDateString
+        const d9 = new Date().toTimeString
+
+        console.log(d, '\n', d1, '\n', d2, '\n', d3, '\n', d4, '\n', d5, '\n', d6, '\n', d7, '\n', d8)
+    </script>
+</body>
+
+</html>
